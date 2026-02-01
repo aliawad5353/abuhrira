@@ -1,11 +1,15 @@
 <?php
-// إعدادات شركة أبو حريرة - اتصال مباشر ونهائي
-$conn = mysqli_connect("mysql.railway.internal", "root", "DhFlqmPwLsQTNJpjadlexdmsfTyCfMxu", "railway", "3306");
+$host     = "mysql.railway.internal";
+$user     = "root";
+$password = "DhFlqmPwLsQTNJpjadlexdmsfTyCfMxu";
+$dbname   = "railway";
+$port     = "3306";
+
+$conn = mysqli_connect($host, $user, $password, $dbname, $port);
 
 if (!$conn) {
-    die("فشل الاتصال: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 mysqli_set_charset($conn, "utf8mb4");
 date_default_timezone_set('Africa/Khartoum');
-?>
