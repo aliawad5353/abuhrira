@@ -1,8 +1,8 @@
 <?php
-// استخدام متغيرات البيئة بدلاً من القيم الثابتة لضمان نجاح الاتصال
+// جلب إعدادات قاعدة البيانات آلياً من Railway لضمان صحة الاتصال
 $host     = getenv('MYSQLHOST') ?: 'mysql.railway.internal';
 $user     = getenv('MYSQLUSER') ?: 'root';
-$password = getenv('MYSQLPASSWORD') ?: 'DhFlqmPwLsQTNJpjadlexdmsfTyCfMxu';
+$password = getenv('MYSQLPASSWORD'); // سيقوم بجلب كلمة المرور الحقيقية آلياً
 $dbname   = getenv('MYSQLDATABASE') ?: 'railway';
 $port     = getenv('MYSQLPORT') ?: '3306';
 
