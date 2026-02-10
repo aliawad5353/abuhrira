@@ -1,5 +1,2 @@
 [variables]
     PHP_VERSION = '7.4'
-
-[phases.setup]
-    nixPkgs = ['...', 'php74', 'php74Extensions.mysqli', 'php74Extensions.pdo', 'php74Extensions.gd']
